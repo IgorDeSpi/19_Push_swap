@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:09:43 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/17 15:21:37 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/05/19 14:25:42 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,27 @@
 # define RRB 10
 # define RRR 11
 
-typedef struct s_d_list
+typedef struct s_ps_list
 {
 	int				content;
-	struct s_d_list	*next;
-	struct s_d_list	*prev;
-}				t_d_list;
+	struct s_ps_list	*next;
+	struct s_ps_list	*prev;
+}				t_ps_list;
 
 typedef struct s_push
 {
-	t_d_list	*a;
-	t_d_list	*b;
+	t_ps_list	*a;
+	t_ps_list	*b;
 }				t_push;
 
-//! s_d_list_0.c
+//! ft_ps_lst_0.c
+t_ps_list	*ft_ps_lstnew(int content);
+t_ps_list	ft_ps_lstadd_front(t_ps_list **lst, t_ps_list *new);
+t_ps_list	*ft_ps_lstlast(t_ps_list *lst);
+int			ft_ps_lstsize(t_ps_list *lst);
+void		ft_ps_lstadd_back(t_ps_list **lst, t_ps_list *new);
 
-//! s_d_list_1.c
+//! ft_ps_lst_1.c
 
 //! ft_rotate.c
 
