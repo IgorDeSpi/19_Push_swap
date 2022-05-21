@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:09:43 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/19 14:25:42 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/05/21 15:11:24 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,27 @@ int			ft_ps_lstsize(t_ps_list *lst);
 void		ft_ps_lstadd_back(t_ps_list **lst, t_ps_list *new);
 
 //! ft_ps_lst_1.c
+void		ft_ps_lstdelone(t_ps_list *lst);
+void		ft_ps_lstclear(t_ps_list **lst);
+void		ft_ps_lstiter(t_ps_list *lst, void (*f)(int));
+void		ft_ps_lstdelfront(t_ps_list **lst);
+void		ft_ps_lstiter_back(t_ps_list *lst, void (*f)(int));
 
 //! ft_rotate.c
+void		ft_ra(t_push *push);
+void		ft_rb(t_push *push);
 
 //! ft_swap.c
+void		ft_sa(t_push *push);
+void		ft_sb(t_push *push);
 
 //! ft_reverse_rotate.c
+void		ft_rra(t_push *push);
+void		ft_rrb(t_push *push);
 
 //! ft_push.c
+void		ft_pa(t_push *push);
+void		ft_pb(t_push *push);
 
 //! libft0.c
 
