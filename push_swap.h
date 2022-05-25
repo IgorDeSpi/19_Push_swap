@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:09:43 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/21 15:11:24 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:48:31 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,14 +72,22 @@ void		ft_pa(t_push *push);
 void		ft_pb(t_push *push);
 
 //! libft0.c
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putchar_fd(char c, int fd);
+int			ft_atoi(const char *str);
 
 //! libft1.c
+char		**ft_split(char const *s, char c);
 
 //! init.c
+void		error(void);
+int			init_push(int count, char **value, t_push *push);
+void		check_duplicate(t_ps_list *s);
 
 //! sort.c
 
 //! utils.c
+void	free_splitted(char *s);
 
 //! sort_utils.c
 

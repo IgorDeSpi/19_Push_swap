@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 13:47:40 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/23 16:13:16 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/05/24 10:32:20 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-static long	check_atoi_inter(int sign, long nbr, char c)
+static long	check_interval(int sign, long nbr, char c)
 {
 	nbr = nbr * 10 + c - '0';
 	if (nbr > 2147483648)
@@ -59,7 +59,7 @@ int	ft_atoi(const char *str)
 	else if (str[i] < '0' || str[i] > '9')
 		error();
 	while (str[i] >= '0' && str[i] <= '9')
-		nbr = check_ft_atoi_inter(sign, nbr, str[i++]);
+		nbr = check_interval(sign, nbr, str[i++]);
 	if ((str[i] == ' ') || (str[i] == '\0'))
 		return (sign * nbr);
 	error();
