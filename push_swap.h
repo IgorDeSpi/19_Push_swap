@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:09:43 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/24 14:48:31 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/05/27 14:23:08 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,13 +81,16 @@ char		**ft_split(char const *s, char c);
 
 //! init.c
 void		error(void);
-int			init_push(int count, char **value, t_push *push);
 void		check_duplicate(t_ps_list *s);
+int			init_push(int count, char **value, t_push *push);
 
 //! sort.c
 
 //! utils.c
-void	free_splitted(char *s);
+void		free_splitted(char *s);
+void		print_instruction(short instruction);
+void		put_to_a(t_push *push, int max, int uppermax);
+int			add_to_a(int i, t_push *push);
 
 //! sort_utils.c
 

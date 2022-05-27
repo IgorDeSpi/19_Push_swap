@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:28:56 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/24 15:10:59 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/05/27 14:20:58 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,82 @@ static void	put_str(short instruction)
 		ft_putstr_fd("rrb\n", 1);
 	if (instruction == RRR)
 		ft_putstr_fd("rrr\n", 1);
+}
+
+void	print_instruction(short instruction)
+{
+	static short	p_instr = NO;
+
+	if ((instruction == SA && p_instr == SB) || (instruction == SB && p_instr == SA))
+	{
+		p_instr = SS;
+		instruction = NO;
+	}
+	if ((instruction == RA && p_instr == RB) || (instruction == RB && p_instr == RA))
+	{
+		p_instr = RR;
+		instruction = NO;
+	}
+	if ((instruction == RRA && p_instr == RRB) || (instruction == RRB && p_instr == RRA))
+	{
+		p_instr = RRR;
+		instruction = NO;
+	}
+	put_str(p_instr);
+	p_instr = instruction;
+}
+
+int	add_to_a(int i, t_push *push)
+{
+	int	p;
+
+	if (ft_ps_lstsize(push->a) >= 2 && (i == 1 || i == 0))
+		if (push->a->content > push->a->next->content)
+			ft_sa(push);
+	p = ft_ps_lstsize(push->b) / 2;
+	if (i == 0)
+	{
+		ft_pa(push);
+		return (1);
+	}
+	else if (i == 1)
+	{
+		ft_sb(push);
+		ft_pa(push);
+		return (1);
+	}
+	else if (i < p)
+		ft_rb(push);
+	else
+		ft_rrb(push);
+	return (0);
+}
+
+void	put_to_a(t_push *push, int max, int uppermax)
+{
+	int	upper;
+	int	lower;
+	int	n;
+
+	n = 1;
+	while (push->b)
+	{
+		uppermax = get_max(push->b, max + 1L);
+		upper = get_index(push->b, uppermax);
+		lower = get_index(push->b, get_max(push->b, uppermax));
+		if (upper < 0 && lower < 0)
+			break ;
+		if (n && get_closer(upper, lower, push->b))
+		{
+			if (add_to_a(lower, push))
+				n = 0;
+		}
+		else
+		{
+			if (add_to_a(upper, push))
+				n = 1;
+		}
+	}
+	if (ft_ps_lstsize(push->a) >= 2 && push->a->content > push->a->next->content)
+		ft_sa(push);
 }
