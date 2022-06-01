@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:09:43 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/01 16:52:33 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/01 17:15:52 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,11 @@ void		put_to_a(t_push *push, int max, int uppermax);
 int			add_to_a(int i, t_push *push);
 
 //! sort_utils.c
+int			is_sorted(t_ps_list *s);
+int			get_index(t_ps_list *s, int n);
+int			get_min(t_ps_list *s);
+int			get_max(t_ps_list *s, long max);
+int			get_closer(int upper, int lower, t_ps_list *s);
 
 //! quick_sort.c
 
