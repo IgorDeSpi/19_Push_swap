@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:09:43 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 10:31:52 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 13:19:23 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,6 @@ int			get_max(t_ps_list *s, long max);
 int			get_closer(int upper, int lower, t_ps_list *s);
 
 //! quick_sort.c
+int			*sort_stack(t_ps_list *s);
 
 #endif
