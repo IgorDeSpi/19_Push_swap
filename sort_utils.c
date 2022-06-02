@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:29:39 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 10:32:03 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:19:39 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ int	get_closer(int upper, int lower, t_ps_list *s)
 	if (upper < p)
 		rupper = upper;
 	else
-		rupper = ft_p_lstsize - upper;
+		rupper = ft_p_lstsize(s) - upper;
 	if (upper < 0)
 		return (1);
 	else if (lower < 0)

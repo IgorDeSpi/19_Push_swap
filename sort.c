@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 15:25:24 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 10:32:41 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:20:33 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	sort_over(t_push *push, int s)
 	int	j;
 	int	*k;
 
-	k = sort_stack_k(push->a);
+	k = sort_stack(push->a);
 	j = ft_p_lstsize(push->a) - 1;
 	put_to_b(push, s, k);
 	while (push->a)

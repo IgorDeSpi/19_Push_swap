@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:30:03 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 12:13:36 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:18:57 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	partition(int *arr, int low, int high)
 		}
 		j++;
 	}
-	swap(&arr[i + 1], arr[high]);
+	swap(&arr[i + 1], &arr[high]);
 	return (i + 1);
 }
 

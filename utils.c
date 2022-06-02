@@ -6,13 +6,13 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:28:56 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 10:32:41 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:17:23 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_splitted(char *s)
+void	free_splitted(char **s)
 {
 	int	i;
 

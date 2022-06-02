@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:09:43 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 13:19:23 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:17:11 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ typedef struct s_push
 
 //! ft_ps_lst_0.c
 t_ps_list	*ft_ps_lstnew(int content);
-t_ps_list	ft_ps_lstadd_front(t_ps_list **lst, t_ps_list *new);
 t_ps_list	*ft_ps_lstlast(t_ps_list *lst);
 int			ft_p_lstsize(t_ps_list *lst);
+void		ft_ps_lstadd_front(t_ps_list **lst, t_ps_list *new);
 void		ft_ps_lstadd_back(t_ps_list **lst, t_ps_list *new);
 
 //! ft_ps_lst_1.c
@@ -92,7 +92,7 @@ void		sort_3(t_push *push);
 void		sort_10(t_push *push);
 
 //! utils.c
-void		free_splitted(char *s);
+void		free_splitted(char **s);
 void		print_instruction(short instruction);
 void		put_to_a(t_push *push, int max, int uppermax);
 int			add_to_a(int i, t_push *push);
