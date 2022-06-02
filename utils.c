@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:28:56 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/27 14:20:58 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 10:32:41 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,37 +50,37 @@ static void	put_str(short instruction)
 		ft_putstr_fd("rrr\n", 1);
 }
 
-void	print_instruction(short instruction)
+void	print_instruction(short inst)
 {
 	static short	p_instr = NO;
 
-	if ((instruction == SA && p_instr == SB) || (instruction == SB && p_instr == SA))
+	if ((inst == SA && p_instr == SB) || (inst == SB && p_instr == SA))
 	{
 		p_instr = SS;
-		instruction = NO;
+		inst = NO;
 	}
-	if ((instruction == RA && p_instr == RB) || (instruction == RB && p_instr == RA))
+	if ((inst == RA && p_instr == RB) || (inst == RB && p_instr == RA))
 	{
 		p_instr = RR;
-		instruction = NO;
+		inst = NO;
 	}
-	if ((instruction == RRA && p_instr == RRB) || (instruction == RRB && p_instr == RRA))
+	if ((inst == RRA && p_instr == RRB) || (inst == RRB && p_instr == RRA))
 	{
 		p_instr = RRR;
-		instruction = NO;
+		inst = NO;
 	}
 	put_str(p_instr);
-	p_instr = instruction;
+	p_instr = inst;
 }
 
 int	add_to_a(int i, t_push *push)
 {
 	int	p;
 
-	if (ft_ps_lstsize(push->a) >= 2 && (i == 1 || i == 0))
+	if (ft_p_lstsize(push->a) >= 2 && (i == 1 || i == 0))
 		if (push->a->content > push->a->next->content)
 			ft_sa(push);
-	p = ft_ps_lstsize(push->b) / 2;
+	p = ft_p_lstsize(push->b) / 2;
 	if (i == 0)
 	{
 		ft_pa(push);
@@ -124,6 +124,6 @@ void	put_to_a(t_push *push, int max, int uppermax)
 				n = 1;
 		}
 	}
-	if (ft_ps_lstsize(push->a) >= 2 && push->a->content > push->a->next->content)
+	if (ft_p_lstsize(push->a) >= 2 && push->a->content > push->a->next->content)
 		ft_sa(push);
 }

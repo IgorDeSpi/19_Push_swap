@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:29:39 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/01 17:13:16 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 10:32:03 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	get_max(t_ps_list *s, long max)
 	i = s->content;
 	j = 0;
 	x = 0;
-	s =s->next;
+	s = s->next;
 	while (s)
 	{
 		if (i < s->content && max > s->content)
@@ -93,15 +93,15 @@ int	get_closer(int upper, int lower, t_ps_list *s)
 	int	rupper;
 	int	rlower;
 
-	p = ft_ps_lstsize(s) / 2;
+	p = ft_p_lstsize(s) / 2;
 	if (lower < p)
 		rlower = lower;
 	else
-		rlower = ft_ps_lstsize(s) - lower;
+		rlower = ft_p_lstsize(s) - lower;
 	if (upper < p)
 		rupper = upper;
 	else
-		rupper = ft_ps_lstsize - upper;
+		rupper = ft_p_lstsize - upper;
 	if (upper < 0)
 		return (1);
 	else if (lower < 0)

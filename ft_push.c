@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:05:10 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/21 15:10:49 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 10:31:23 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_pa(t_push *push)
 {
 	t_ps_list	*tmp;
 
-	if (ft_ps_lstsize(push->b) == 0)
+	if (ft_p_lstsize(push->b) == 0)
 		return ;
 	tmp = ft_ps_lstnew(push->b->content);
 	ft_ps_lstadd_front(&(push->a), tmp);
@@ -28,7 +28,7 @@ void	ft_pb(t_push *push)
 {
 	t_ps_list	*tmp;
 
-	if (ft_ps_lstsize(push->a) == 0)
+	if (ft_p_lstsize(push->a) == 0)
 		return ;
 	tmp = ft_ps_lstnew(push->a->content);
 	ft_ps_lstadd_front(&(push->b), tmp);

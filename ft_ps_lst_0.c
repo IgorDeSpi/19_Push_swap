@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 12:10:16 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/19 14:25:24 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 10:31:02 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ t_ps_list	ft_ps_lstadd_front(t_ps_list **lst, t_ps_list *new)
 	}
 }
 
-int	ft_ps_lstsize(t_ps_list *lst)
+int	ft_p_lstsize(t_ps_list *lst)
 {
 	int			i;
 	t_ps_list	*tmp;

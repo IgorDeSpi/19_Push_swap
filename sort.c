@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 15:25:24 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/01 16:50:38 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/02 10:32:41 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	sort(t_push *push)
 {
-	if (ft_ps_lstsize(push->a) == 2)
+	if (ft_p_lstsize(push->a) == 2)
 		ft_sa(push);
-	else if (ft_ps_lstsize(push->a) == 3)
+	else if (ft_p_lstsize(push->a) == 3)
 		sort_3(push);
-	else if (ft_ps_lstsize(push->a) < 10)
+	else if (ft_p_lstsize(push->a) < 10)
 		sort_10(push);
 	else
 	{
-		if (ft_ps_lstsize(push->a) <= 100)
+		if (ft_p_lstsize(push->a) <= 100)
 			sort_over(push, 12);
 		else
 		{
@@ -39,7 +39,7 @@ void	put_to_b(t_push *push, int s, int *k)
 	int	i1;
 	int	i2;
 
-	j = ft_ps_lstsize(push->a) - 1;
+	j = ft_p_lstsize(push->a) - 1;
 	i1 = j / 2 - s;
 	i2 = j / 2 + s;
 	while (i2 < j && i1 > 0)
@@ -50,7 +50,7 @@ void	put_to_b(t_push *push, int s, int *k)
 			if (push->a->content >= k[i1] && push->a->content < k[i2] && v--)
 			{
 				ft_pb(push);
-				if (ft_ps_lstsize(push->b) > 1 && push->b->content < k[j / 2])
+				if (ft_p_lstsize(push->b) > 1 && push->b->content < k[j / 2])
 					ft_rb(push);
 			}
 			else
@@ -67,7 +67,7 @@ void	sort_over(t_push *push, int s)
 	int	*k;
 
 	k = sort_stack_k(push->a);
-	j = ft_ps_lstsize(push->a) - 1;
+	j = ft_p_lstsize(push->a) - 1;
 	put_to_b(push, s, k);
 	while (push->a)
 	{
@@ -85,7 +85,7 @@ void	sort_3(t_push *push)
 	int	a1;
 	int	a2;
 
-	if (ft_ps_lstsize(push->a) != 3)
+	if (ft_p_lstsize(push->a) != 3)
 		return ;
 	a0 = push->a->content;
 	a1 = push->a->next->content;
@@ -113,9 +113,9 @@ void	sort_10(t_push *push)
 	int	i;
 	int	p;
 
-	while (ft_ps_lstsize(push->a) > 3)
+	while (ft_p_lstsize(push->a) > 3)
 	{
-		p = ft_ps_lstsize(push->a) / 2;
+		p = ft_p_lstsize(push->a) / 2;
 		i = get_index(push->a, get_min(push->a));
 		if (i == 1)
 		{
@@ -130,6 +130,6 @@ void	sort_10(t_push *push)
 			ft_rra(push);
 	}
 	sort_3(push);
-	while (ft_ps_lstsize(push->b))
+	while (ft_p_lstsize(push->b))
 		ft_pa(push);
 }
