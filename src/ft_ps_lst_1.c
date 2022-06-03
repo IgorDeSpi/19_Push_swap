@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 14:25:00 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/05/21 14:28:51 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/03 15:18:13 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ft_ps_lstdelone(t_ps_list *lst)
 {

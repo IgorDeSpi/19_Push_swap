@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 15:25:24 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 16:20:33 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/03 15:18:13 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sort(t_push *push)
 {
@@ -26,7 +26,7 @@ void	sort(t_push *push)
 			sort_over(push, 12);
 		else
 		{
-			sort_over(push, 3);
+			sort_over(push, 30);
 		}
 	}
 	print_instruction(NO);

@@ -6,19 +6,19 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:30:03 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 16:18:57 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/03 15:18:13 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	swap(int *a, int *b)
 {
-	int	t;
+	int	tmp;
 
-	t = *a;
+	tmp = *a;
 	*a = *b;
-	*b = t;
+	*b = tmp;
 }
 
 static int	partition(int *arr, int low, int high)
@@ -45,13 +45,13 @@ static int	partition(int *arr, int low, int high)
 
 static void	quicksort(int *arr, int low, int high)
 {
-	int	pi;
+	int	sw;
 
 	if (low < high)
 	{
-		pi = partition(arr, low, high);
-		quicksort(arr, low, pi - 1);
-		quicksort(arr, pi + 1, high);
+		sw = partition(arr, low, high);
+		quicksort(arr, low, sw - 1);
+		quicksort(arr, sw + 1, high);
 	}
 }
 

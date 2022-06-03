@@ -1,47 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_reverse_rotate.c                                :+:      :+:    :+:   */
+/*   ft_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/21 14:54:33 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 10:31:34 by ide-spir         ###   ########.fr       */
+/*   Created: 2022/05/19 11:48:40 by ide-spir          #+#    #+#             */
+/*   Updated: 2022/06/03 15:18:13 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ft_rra(t_push *push)
+void	ft_ra(t_push *push)
 {
-	t_ps_list	*last;
+	t_ps_list	*front;
 	t_ps_list	*tmp;
 
 	if (ft_p_lstsize(push->a) > 1)
 	{
-		last = ft_ps_lstlast(push->a);
-		tmp = ft_ps_lstnew(last->content);
-		last->prev->next = NULL;
-		tmp->prev = NULL;
-		ft_ps_lstadd_front(&(push->a), tmp);
-		ft_ps_lstdelone(last);
-		print_instruction(RRA);
+		front = push->a;
+		tmp = ft_ps_lstnew(front->content);
+		ft_ps_lstadd_back(&(push->a), tmp);
+		front->next->prev = NULL;
+		push->a = push->a->next;
+		ft_ps_lstdelone(front);
+		print_instruction(RA);
 	}
 }
 
-void	ft_rrb(t_push *push)
+void	ft_rb(t_push *push)
 {
-	t_ps_list	*last;
+	t_ps_list	*front;
 	t_ps_list	*tmp;
 
 	if (ft_p_lstsize(push->b) > 1)
 	{
-		last = ft_ps_lstlast(push->b);
-		tmp = ft_ps_lstnew(last->content);
-		last->prev->next = NULL;
-		tmp->prev = NULL;
-		ft_ps_lstadd_front(&(push->b), tmp);
-		ft_ps_lstdelone(last);
-		print_instruction(RRB);
+		front = push->b;
+		tmp = ft_ps_lstnew(front->content);
+		ft_ps_lstadd_back(&(push->b), tmp);
+		front->next->prev = NULL;
+		push->b = push->b->next;
+		ft_ps_lstdelone(front);
+		print_instruction(RB);
 	}
 }
