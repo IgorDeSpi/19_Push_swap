@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:28:56 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/02 16:17:23 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/03 10:42:30 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ void	print_instruction(short inst)
 		p_instr = SS;
 		inst = NO;
 	}
-	if ((inst == RA && p_instr == RB) || (inst == RB && p_instr == RA))
+	else if ((inst == RA && p_instr == RB) || (inst == RB && p_instr == RA))
 	{
 		p_instr = RR;
 		inst = NO;
 	}
-	if ((inst == RRA && p_instr == RRB) || (inst == RRB && p_instr == RRA))
+	else if ((inst == RRA && p_instr == RRB) || (inst == RRB && p_instr == RRA))
 	{
 		p_instr = RRR;
 		inst = NO;

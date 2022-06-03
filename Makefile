@@ -6,7 +6,7 @@
 #    By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/02 15:57:30 by ide-spir          #+#    #+#              #
-#    Updated: 2022/06/02 16:15:20 by ide-spir         ###   ########.fr        #
+#    Updated: 2022/06/03 12:47:42 by ide-spir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ FLAGS = -Wall -Werror -Wextra
 
 
 $(NAME): ${OBJS}
-	@ar rc ${NAME} ${OBJS}
+	@${CC} ${OBJS} -o ${NAME}
 
 all: $(NAME)
 
