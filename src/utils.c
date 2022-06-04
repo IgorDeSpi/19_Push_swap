@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:28:56 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/06/03 15:18:13 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/06/04 15:31:44 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	put_str(short instruction)
 	if (instruction == SB)
 		ft_putstr_fd("sb\n", 1);
 	if (instruction == SS)
-		ft_putstr_fd("sb\n", 1);
+		ft_putstr_fd("ss\n", 1);
 	if (instruction == PA)
 		ft_putstr_fd("pa\n", 1);
 	if (instruction == PB)
